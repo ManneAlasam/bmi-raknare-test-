@@ -45,7 +45,7 @@ if (bmi < 18.5) {
   console.log("\nDu är normalvikt");
 } else if (bmi <= 30) {
   console.log("\nDu är övervikt");
-} else if (bmi < 40) {
+} else if (bmi <= 40) {
   console.log("\nDu är kraftigt övervikt");
 } else {
   console.log("\nDu är extremt övervikt");

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI och BMR Räknaren</h1>
+      <form id="calculatorForm">
+        <div class="form-group">
+          <label for="gender">Kön: </label>
+          <select id="gender" required>
+            <option value="">Välj kön</option>
+            <option value="man">Man</option>
+            <option value="kvinna">Kvinna</option>
+          </select>
+          <span class="error" id="genderError">Vänligen välj kön</span>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Ålder:</label>
+          <input type="number" id="age" min="18" max="70" required />
+          <span class="error" id="ageError">Åldern måste vara mellan 18-70</span>
+        </div>
+
+        <div class="form-group">
+          <label for="height">Längd:</label>
+          <input type="number" id="height" min="50" max="230" required />
+          <span class="error" id="heightError">Längden måste vara mellan 50-230 cm</span>
+        </div>
+
+        <div class="form-group">
+          <label for="weight">Vikt:</label>
+          <input type="number" id="weight" min="10" max="250" required />
+          <span class="error" id="weightError">Vikten måste vara mellan 10-250 kg</span>
+        </div>
+
+        <button type="button" onclick="calculate()">Beräkna</button>
+      </form>
+
+      <div class="result" id="result">
+        <h2>Dina resultat</h2>
+        <div class="result-item"><strong>BMI:</strong> <span id="bmiValue"></span></div>
+        <div class="result-item"><strong>Kategori:</strong> <span id="bmiCategory"></span></div>
+        <div class="result-item"><strong>BMR:</strong> <span id="bmrValue"></span></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
